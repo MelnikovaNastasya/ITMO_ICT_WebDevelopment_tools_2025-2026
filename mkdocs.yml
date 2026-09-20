@@ -2,7 +2,8 @@ site_name: TimeFlow — лабораторная работа №1
 site_description: Отчёт Мельниковой Настасьи, группа К3341
 site_url: https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/
 
-docs_dir: students/k3341/Melnikova_Nastasya/Lr1/docs
+docs_dir: students/k3341/Melnikova_Nastasya
+
 
 theme:
   name: material
@@ -12,7 +13,8 @@ theme:
     accent: blue
 
 nav:
-  - Отчёт: index.md
+  - Лабораторная работа №1: Lr1/docs/index.md
+  - Лабораторная работа №2: Lr2/docs/index.md
 
 markdown_extensions:
   - tables
