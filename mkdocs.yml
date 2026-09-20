@@ -13,8 +13,10 @@ theme:
     accent: blue
 
 nav:
-  - Лабораторная работа №1: Lr1/docs/index.md
-  - Лабораторная работа №2: Lr2/docs/index.md
+  - Главная: students/k3341/Melnikova_Nastasya/Lr1/docs/index.md
+  - Лабораторная работа №1: students/k3341/Melnikova_Nastasya/Lr1/docs/index.md
+  - Лабораторная работа №2: students/k3341/Melnikova_Nastasya/Lr2/docs/index.md
+  - Лабораторная работа №3: students/k3341/Melnikova_Nastasya/Lr3/docs/index.md
 
 markdown_extensions:
   - tables
