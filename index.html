@@ -1,0 +1,1257 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Отчёт Мельниковой Настасьи, группа К3341">
+      
+      
+      
+        <link rel="canonical" href="https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>TimeFlow — лабораторная работа №1</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="." title="TimeFlow — лабораторная работа №1" class="md-header__button md-logo" aria-label="TimeFlow — лабораторная работа №1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TimeFlow — лабораторная работа №1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Отчёт
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="TimeFlow — лабораторная работа №1" class="md-nav__button md-logo" aria-label="TimeFlow — лабораторная работа №1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TimeFlow — лабораторная работа №1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отчёт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Реализация серверного приложения на FastAPI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Описание проекта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Структура проекта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Подключение к PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-alembic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Миграции Alembic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Регистрация и авторизация
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. API пользователей
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. API проектов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. API задач
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-many-to-many" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Теги и связь many-to-many
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Учёт времени
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Защита пользовательских данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Swagger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Тестирование
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-1113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Выполнение практик 1.1–1.3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Выполнение практик 1.1–1.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практика 1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практика 1.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практика 1.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Реализация серверного приложения на FastAPI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Описание проекта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Структура проекта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Подключение к PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-alembic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Миграции Alembic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Регистрация и авторизация
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. API пользователей
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. API проектов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. API задач
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-many-to-many" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Теги и связь many-to-many
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Учёт времени
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Защита пользовательских данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Swagger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Тестирование
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-1113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Выполнение практик 1.1–1.3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Выполнение практик 1.1–1.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практика 1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практика 1.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практика 1.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no1">Лабораторная работа №1<a class="headerlink" href="#no1" title="Permanent link">&para;</a></h1>
+<h2 id="fastapi">Реализация серверного приложения на FastAPI<a class="headerlink" href="#fastapi" title="Permanent link">&para;</a></h2>
+<p><strong>Тема:</strong> разработка программы-тайм-менеджера TimeFlow<br />
+<strong>Цель работы:</strong> разработать серверное приложение на FastAPI с использованием PostgreSQL, SQLAlchemy, Alembic и JWT-аутентификации.</p>
+<hr />
+<h2 id="1">1. Описание проекта<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>TimeFlow — серверное приложение для планирования задач и учёта времени. Пользователь может зарегистрироваться, войти в систему, создавать проекты и задачи, назначать задачам теги, устанавливать дедлайны и учитывать затраченное время.</p>
+<p>Все пользовательские данные защищены. Пользователь может просматривать, изменять и удалять только собственные задачи, проекты, теги и записи времени.</p>
+<p>В проекте использованы:</p>
+<ul>
+<li>Python;</li>
+<li>FastAPI;</li>
+<li>PostgreSQL;</li>
+<li>SQLAlchemy 2.0;</li>
+<li>Alembic;</li>
+<li>Pydantic;</li>
+<li>JWT;</li>
+<li>Argon2;</li>
+<li>Pytest.</li>
+</ul>
+<hr />
+<h2 id="2">2. Структура проекта<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>Проект разделён на отдельные модули:</p>
+<pre><code class="language-text">timeflow/
+├── app/
+│   ├── api/
+│   │   └── dependencies.py
+│   ├── core/
+│   │   ├── config.py
+│   │   └── security.py
+│   ├── db/
+│   │   └── database.py
+│   ├── models/
+│   │   └── entities.py
+│   ├── routers/
+│   │   ├── auth.py
+│   │   ├── projects.py
+│   │   ├── tags.py
+│   │   ├── tasks.py
+│   │   └── users.py
+│   ├── schemas/
+│   │   └── schemas.py
+│   └── main.py
+├── alembic/
+├── docs/
+├── tests/
+├── .env.example
+├── alembic.ini
+└── requirements.txt
+````
+
+Такая структура разделяет настройки приложения, модели базы данных, схемы запросов и ответов, API-маршруты и функции безопасности.
+
+---
+
+## 3. Модель базы данных
+
+В приложении реализовано шесть таблиц:
+
+1. `users` — пользователи;
+2. `projects` — проекты;
+3. `tasks` — задачи;
+4. `tags` — теги;
+5. `task_tags` — связь задач и тегов;
+6. `time_entries` — записи затраченного времени.
+
+В проекте используются связи one-to-many:
+
+* один пользователь может иметь несколько проектов;
+* один пользователь может иметь несколько задач;
+* один проект может содержать несколько задач;
+* одна задача может иметь несколько записей времени.
+
+Связь many-to-many реализована между задачами и тегами. Одна задача может иметь несколько тегов, а один тег может относиться к нескольким задачам.
+
+Ассоциативная таблица `task_tags` содержит поля `task_id`, `tag_id` и дополнительное поле `added_at`, которое хранит время назначения тега задаче.
+
+```python
+class TaskTag(Base):
+    __tablename__ = &quot;task_tags&quot;
+
+    task_id: Mapped[int] = mapped_column(
+        ForeignKey(&quot;tasks.id&quot;, ondelete=&quot;CASCADE&quot;),
+        primary_key=True
+    )
+
+    tag_id: Mapped[int] = mapped_column(
+        ForeignKey(&quot;tags.id&quot;, ondelete=&quot;CASCADE&quot;),
+        primary_key=True
+    )
+
+    added_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        default=utcnow
+    )
+</code></pre>
+<p>Полный код моделей:</p>
+<p>[app/models/entities.py]</p>
+<hr />
+<h2 id="4-postgresql">4. Подключение к PostgreSQL<a class="headerlink" href="#4-postgresql" title="Permanent link">&para;</a></h2>
+<p>Для хранения данных используется PostgreSQL. Адрес базы данных передаётся через переменную окружения <code>DATABASE_URL</code>.</p>
+<p>Пример файла <code>.env.example</code>:</p>
+<pre><code class="language-env">DATABASE_URL=postgresql+psycopg://postgres:postgres@localhost:5432/timeflow
+JWT_SECRET=replace-with-a-long-random-secret
+ACCESS_TOKEN_EXPIRE_MINUTES=60
+</code></pre>
+<p>Подключение к базе данных:</p>
+<pre><code class="language-python">engine = create_engine(
+    settings.database_url,
+    pool_pre_ping=True
+)
+
+SessionLocal = sessionmaker(
+    bind=engine,
+    autoflush=False,
+    expire_on_commit=False
+)
+
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+</code></pre>
+<p>Настоящий файл <code>.env</code> добавлен в <code>.gitignore</code>, поэтому пароль базы данных и секретный ключ JWT не загружаются в открытый репозиторий.</p>
+<p>Полный код подключения:</p>
+<p>[app/db/database.py]</p>
+<hr />
+<h2 id="5-alembic">5. Миграции Alembic<a class="headerlink" href="#5-alembic" title="Permanent link">&para;</a></h2>
+<p>Для управления структурой базы данных используется Alembic.</p>
+<p>Начальная миграция создаёт все шесть таблиц, внешние ключи, индексы, ограничения уникальности и перечисления статусов и приоритетов.</p>
+<p>Применение миграций:</p>
+<pre><code class="language-bash">alembic upgrade head
+</code></pre>
+<p>Создание новой миграции:</p>
+<pre><code class="language-bash">alembic revision --autogenerate -m &quot;описание изменения&quot;
+</code></pre>
+<p>Файлы миграций:</p>
+<p>[alembic]</p>
+<hr />
+<h2 id="6">6. Регистрация и авторизация<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<p>Для регистрации используется метод:</p>
+<pre><code class="language-text">POST /auth/register
+</code></pre>
+<p>Пользователь передаёт электронную почту, имя пользователя и пароль. Перед сохранением пароль хэшируется с помощью алгоритма Argon2.</p>
+<p>Пароль не возвращается в ответах API.</p>
+<p>Для входа используется метод:</p>
+<pre><code class="language-text">POST /auth/login
+</code></pre>
+<p>После проверки имени пользователя и пароля сервер создаёт JWT-токен.</p>
+<p>В поле <code>sub</code> сохраняется идентификатор пользователя, а в поле <code>exp</code> — время окончания действия токена.</p>
+<pre><code class="language-python">def create_access_token(user_id: int) -&gt; str:
+    expires = datetime.now(timezone.utc) + timedelta(
+        minutes=settings.access_token_expire_minutes
+    )
+
+    return jwt.encode(
+        {&quot;sub&quot;: str(user_id), &quot;exp&quot;: expires},
+        settings.jwt_secret,
+        algorithm=settings.jwt_algorithm,
+    )
+</code></pre>
+<p>При обращении к защищённым методам токен передаётся в заголовке:</p>
+<pre><code class="language-text">Authorization: Bearer &lt;JWT-токен&gt;
+</code></pre>
+<p>Готовые системы авторизации не используются. Генерация и проверка JWT реализованы вручную.</p>
+<p>Код безопасности:</p>
+<p>[app/core/security.py]</p>
+<p>[app/api/dependencies.py]</p>
+<hr />
+<h2 id="7-api">7. API пользователей<a class="headerlink" href="#7-api" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Адрес</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/auth/register</code></td>
+<td>регистрация</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/auth/login</code></td>
+<td>получение JWT</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/users/me</code></td>
+<td>получение текущего пользователя</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/users</code></td>
+<td>получение списка пользователей</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/users/me/password</code></td>
+<td>смена пароля</td>
+</tr>
+</tbody>
+</table>
+<p>При смене пароля пользователь должен указать старый пароль. Новый пароль сохраняется только в виде хэша.</p>
+<hr />
+<h2 id="8-api">8. API проектов<a class="headerlink" href="#8-api" title="Permanent link">&para;</a></h2>
+<p>Для проектов реализованы CRUD-операции:</p>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Адрес</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/projects</code></td>
+<td>получить проекты пользователя</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/projects</code></td>
+<td>создать проект</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/projects/{project_id}</code></td>
+<td>получить один проект</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/projects/{project_id}</code></td>
+<td>изменить проект</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/projects/{project_id}</code></td>
+<td>удалить проект</td>
+</tr>
+</tbody>
+</table>
+<p>При получении проекта сервер возвращает вложенный список его задач. Это демонстрирует связь one-to-many.</p>
+<hr />
+<h2 id="9-api">9. API задач<a class="headerlink" href="#9-api" title="Permanent link">&para;</a></h2>
+<p>Для задач реализованы следующие методы:</p>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Адрес</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/tasks</code></td>
+<td>получить список задач</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/tasks</code></td>
+<td>создать задачу</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/tasks/{task_id}</code></td>
+<td>получить одну задачу</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/tasks/{task_id}</code></td>
+<td>изменить задачу</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/tasks/{task_id}</code></td>
+<td>удалить задачу</td>
+</tr>
+</tbody>
+</table>
+<p>Задача содержит:</p>
+<ul>
+<li>название;</li>
+<li>описание;</li>
+<li>статус;</li>
+<li>приоритет;</li>
+<li>дедлайн;</li>
+<li>проект;</li>
+<li>дату создания;</li>
+<li>дату изменения.</li>
+</ul>
+<p>Доступна фильтрация задач по статусу, приоритету и дедлайну.</p>
+<p>При получении задачи возвращаются вложенные объекты:</p>
+<ul>
+<li>проект;</li>
+<li>список тегов;</li>
+<li>список записей времени.</li>
+</ul>
+<hr />
+<h2 id="10-many-to-many">10. Теги и связь many-to-many<a class="headerlink" href="#10-many-to-many" title="Permanent link">&para;</a></h2>
+<p>Для работы с тегами реализованы методы:</p>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Адрес</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/tags</code></td>
+<td>получить теги пользователя</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/tags</code></td>
+<td>создать тег</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/tags/{tag_id}</code></td>
+<td>удалить тег</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/tasks/{task_id}/tags/{tag_id}</code></td>
+<td>назначить тег задаче</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/tasks/{task_id}/tags/{tag_id}</code></td>
+<td>удалить тег у задачи</td>
+</tr>
+</tbody>
+</table>
+<p>Одинаковые теги нельзя повторно создавать для одного пользователя. В этом случае сервер возвращает ошибку <code>409 Conflict</code>.</p>
+<p>После назначения тега он отображается как вложенный объект в задаче.</p>
+<hr />
+<h2 id="11">11. Учёт времени<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<p>Для каждой задачи можно создавать записи затраченного времени.</p>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Адрес</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/tasks/{task_id}/time</code></td>
+<td>получить записи времени</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/tasks/{task_id}/time</code></td>
+<td>добавить запись времени</td>
+</tr>
+</tbody>
+</table>
+<p>Пользователь указывает время начала и окончания работы. Продолжительность вычисляется сервером в минутах.</p>
+<p>Например, для периода с 10:00 до 11:30 значение <code>duration_minutes</code> равно <code>90</code>.</p>
+<hr />
+<h2 id="12">12. Защита пользовательских данных<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<p>Все операции проверяют владельца объекта.</p>
+<p>Пользователь может просматривать, изменять и удалять только собственные проекты, задачи, теги и записи времени.</p>
+<p>При попытке получить чужую задачу сервер возвращает ошибку <code>404</code>.</p>
+<p>Также выполнены следующие требования безопасности:</p>
+<ul>
+<li>пароли не сохраняются в открытом виде;</li>
+<li>пароли не возвращаются через API;</li>
+<li>используется Argon2;</li>
+<li>JWT имеет ограниченный срок действия;</li>
+<li>секретный ключ хранится в <code>.env</code>;</li>
+<li>email и username пользователя уникальны.</li>
+</ul>
+<hr />
+<h2 id="13-swagger">13. Swagger<a class="headerlink" href="#13-swagger" title="Permanent link">&para;</a></h2>
+<p>FastAPI автоматически создаёт интерактивную документацию Swagger.</p>
+<p>После запуска приложения она доступна по адресу:</p>
+<pre><code class="language-text">http://127.0.0.1:8000/docs
+</code></pre>
+<p>Swagger позволяет просматривать все API-методы, выполнять авторизацию и отправлять тестовые запросы.</p>
+<p>Запуск приложения:</p>
+<pre><code class="language-bash">python -m uvicorn app.main:app --reload
+</code></pre>
+<hr />
+<h2 id="14">14. Тестирование<a class="headerlink" href="#14" title="Permanent link">&para;</a></h2>
+<p>В проекте реализованы автоматические тесты Pytest.</p>
+<p>Тесты проверяют:</p>
+<ul>
+<li>регистрацию;</li>
+<li>авторизацию;</li>
+<li>получение текущего пользователя;</li>
+<li>CRUD задач;</li>
+<li>связь задачи и тега;</li>
+<li>учёт времени;</li>
+<li>запрет доступа к чужой задаче.</li>
+</ul>
+<p>Запуск тестов:</p>
+<pre><code class="language-bash">pytest -q
+</code></pre>
+<p>Результат:</p>
+<pre><code class="language-text">4 passed
+</code></pre>
+<p>Все автоматические тесты были успешно пройдены.</p>
+<hr />
+<h2 id="15-1113">15. Выполнение практик 1.1–1.3<a class="headerlink" href="#15-1113" title="Permanent link">&para;</a></h2>
+<h3 id="11_1">Практика 1.1<a class="headerlink" href="#11_1" title="Permanent link">&para;</a></h3>
+<p>Выполнено:</p>
+<ul>
+<li>создано приложение FastAPI;</li>
+<li>реализованы Pydantic-схемы;</li>
+<li>добавлена аннотация типов;</li>
+<li>разработаны CRUD-методы;</li>
+<li>настроена документация Swagger.</li>
+</ul>
+<h3 id="12_1">Практика 1.2<a class="headerlink" href="#12_1" title="Permanent link">&para;</a></h3>
+<p>Выполнено:</p>
+<ul>
+<li>подключена база PostgreSQL;</li>
+<li>реализованы ORM-модели;</li>
+<li>добавлены связи one-to-many и many-to-many;</li>
+<li>реализованы вложенные объекты;</li>
+<li>добавлена ассоциативная сущность с дополнительным полем.</li>
+</ul>
+<h3 id="13">Практика 1.3<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>Выполнено:</p>
+<ul>
+<li>настроен Alembic;</li>
+<li>создана начальная миграция;</li>
+<li>URL базы данных передаётся через <code>.env</code>;</li>
+<li>добавлен <code>.gitignore</code>;</li>
+<li>создана модульная структура проекта.</li>
+</ul>
+<hr />
+<h2 id="16">16. Вывод<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
+<p>В ходе лабораторной работы было разработано серверное приложение TimeFlow на FastAPI.</p>
+<p>В приложении реализованы шесть таблиц, связи one-to-many и many-to-many, CRUD-операции, вложенное отображение связанных объектов, фильтрация задач и учёт затраченного времени.</p>
+<p>Также реализованы регистрация, авторизация, ручная генерация и проверка JWT-токенов, хэширование паролей, получение информации о пользователе, список пользователей и смена пароля.</p>
+<p>Для хранения данных используется PostgreSQL, а изменение структуры базы выполняется с помощью Alembic.</p>
+<p>Работоспособность приложения подтверждена проверкой API через Swagger и успешным прохождением автоматических тестов Pytest.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
