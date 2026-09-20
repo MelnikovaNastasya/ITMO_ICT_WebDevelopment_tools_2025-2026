@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/</loc>
+         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/Lr1/</loc>
          <lastmod>2026-09-20</lastmod>
     </url>
     <url>
-         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/CHECKLIST/</loc>
+         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/Lr1/ER_DIAGRAM/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/Lr1/docs/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/Lr1/docs/CHECKLIST/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/Lr2/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/Lr2/docs/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/Lr2/docs/CHECKLIST/</loc>
          <lastmod>2026-09-20</lastmod>
     </url>
 </urlset>

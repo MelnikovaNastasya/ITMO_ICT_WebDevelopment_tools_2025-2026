@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/CHECKLIST/">
+        <link rel="canonical" href="https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/Lr2/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Чек-лист сдачи - TimeFlow — лабораторная работа №1</title>
+        <title>Лабораторная работа №2 — потоки, процессы и асинхронность - TimeFlow — лабораторная работа №1</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-" class="md-skip">
+        <a href="#no2" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Чек-лист сдачи
+              Лабораторная работа №2 — потоки, процессы и асинхронность
             
           </span>
         </div>
@@ -204,14 +204,41 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../Lr1/docs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Отчёт
+    Лабораторная работа №1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №2
   
 
     
@@ -244,6 +271,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему в задаче 1 используется формула
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка на macOS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запуск задачи 1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запуск задачи 2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тесты
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Функции из задания
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -259,26 +360,50 @@
 
 
 
-<h1 id="-">Чек-лист сдачи<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
+<h1 id="no2">Лабораторная работа №2 — потоки, процессы и асинхронность<a class="headerlink" href="#no2" title="Permanent link">&para;</a></h1>
+<p>Проект сравнивает <code>threading</code>, <code>multiprocessing</code> и <code>asyncio</code> на двух задачах:</p>
+<ol>
+<li>вычисление суммы чисел от 1 до <code>10_000_000_000_000</code>;</li>
+<li>параллельная загрузка веб-страниц с сохранением заголовков в таблицу <code>tasks</code> базы TimeFlow из ЛР1.</li>
+</ol>
+<h2 id="1">Почему в задаче 1 используется формула<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>Последовательный перебор десяти триллионов чисел занял бы слишком много времени. Функция <code>calculate_sum(start, end)</code> использует формулу арифметической прогрессии, а общий диапазон всё равно делится на четыре непересекающиеся части. Поэтому программа выполняет требование и получает точный результат:</p>
+<pre><code class="language-text">50000000000005000000000000
+</code></pre>
+<p>Так как каждая часть вычисляется за постоянное время, результаты замера показывают главным образом накладные расходы на создание потоков, процессов и цикла событий. Это нужно честно указать в выводе.</p>
+<h2 id="macos">Установка на macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
+<p>Из папки <code>Lr2</code>:</p>
+<pre><code class="language-bash">python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+cp .env.example .env
+</code></pre>
+<p>В <code>.env</code> укажите тот же пароль PostgreSQL, что и в ЛР1. <code>PARSER_USER_ID=1</code> означает, что результаты парсинга будут добавлены как задачи пользователя с id 1.</p>
+<h2 id="1_1">Запуск задачи 1<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">python -m task1.threading_sum
+python -m task1.multiprocessing_sum
+python -m task1.async_sum
+python -m task1.benchmark
+</code></pre>
+<p>Последняя команда запускает все три варианта и сохраняет таблицу в <code>results/task1_times.csv</code>.</p>
+<h2 id="2">Запуск задачи 2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>PostgreSQL и база <code>timeflow</code> должны быть запущены, а миграция ЛР1 уже применена.</p>
+<pre><code class="language-bash">python -m task2.threading_parser
+python -m task2.multiprocessing_parser
+python -m task2.async_parser
+</code></pre>
+<p>После каждого запуска откройте Swagger ЛР1 и выполните <code>GET /tasks</code>: заголовки страниц появятся как новые задачи со статусом <code>planned</code> и приоритетом <code>low</code>. Поле <code>description</code> содержит URL и название подхода.</p>
+<p>Повторный запуск создаёт новые записи — это удобно для демонстрации каждого подхода отдельно.</p>
+<h2 id="_1">Тесты<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Тесты не обращаются к интернету и PostgreSQL:</p>
+<pre><code class="language-bash">pytest -q
+</code></pre>
+<h2 id="_2">Функции из задания<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[x] 6 таблиц (требуется 5+)</li>
-<li>[x] one-to-many</li>
-<li>[x] many-to-many</li>
-<li>[x] поле <code>added_at</code> в ассоциативной сущности</li>
-<li>[x] PostgreSQL и SQLAlchemy 2</li>
-<li>[x] CRUD и вложенные объекты</li>
-<li>[x] Alembic и URL из <code>.env</code></li>
-<li>[x] типизация API</li>
-<li>[x] модульная структура</li>
-<li>[x] регистрация и авторизация</li>
-<li>[x] JWT-аутентификация вручную</li>
-<li>[x] Argon2-хэширование паролей</li>
-<li>[x] текущий пользователь, список пользователей, смена пароля</li>
-<li>[ ] создать локальную БД PostgreSQL и применить миграцию</li>
-<li>[ ] выполнить тесты на компьютере</li>
-<li>[ ] создать репозиторий и три коммита/ветки/папки практик</li>
-<li>[ ] заменить ссылки-заглушки в отчёте</li>
-<li>[ ] включить GitHub Pages</li>
+<li>Во всех файлах задачи 1 используется <code>calculate_sum()</code> из <code>task1/common.py</code>.</li>
+<li>В каждом файле задачи 2 определена <code>parse_and_save()</code>.</li>
+<li>Список URL делится на части в вариантах с потоками и процессами.</li>
+<li><code>asyncio</code> запускает отдельную корутину на каждый URL через <code>asyncio.gather()</code>.</li>
 </ul>
 
 
