@@ -12,21 +12,6 @@
 - Регистрация, вход, JWT, хэширование Argon2, текущий пользователь, список пользователей и смена пароля.
 - Alembic, `.env`, типизация, Swagger и pytest-тесты.
 
-## Быстрый запуск (Windows PowerShell)
-
-```powershell
-py -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-Copy-Item .env.example .env
-```
-
-Создай базу в pgAdmin с именем `timeflow`. Если логин или пароль PostgreSQL отличаются от `postgres`, измени строку `DATABASE_URL` в `.env`.
-
-```powershell
-alembic upgrade head
-python -m uvicorn app.main:app --reload
-```
 
 Открыть Swagger: <http://127.0.0.1:8000/docs>.
 
@@ -41,12 +26,6 @@ alembic upgrade head
 python -m uvicorn app.main:app --reload
 ```
 
-## Как проверить авторизацию в Swagger
-
-1. `POST /auth/register` — создай пользователя.
-2. Нажми **Authorize** или вызови `POST /auth/login`.
-3. В поле `username` можно вводить username или email, затем пароль.
-4. После авторизации вызывай защищённые методы.
 
 ## Основные эндпоинты
 
@@ -104,11 +83,4 @@ timeflow/
 
 `security.py` сам создаёт токен через `jwt.encode`, а зависимость `get_current_user` извлекает Bearer-токен, декодирует его, берёт `sub` и загружает пользователя. Готовые библиотеки авторизации вроде fastapi-users не используются. Сторонние пакеты используются только для разрешённых операций: создания JWT и хэширования.
 
-## Перед сдачей
-
-- Сделай три осмысленных git-коммита (либо отдельные папки/ветки) для практик 1.1–1.3.
-- Загрузи репозиторий на GitHub.
-- В `docs/index.md` замени `YOUR_USERNAME` и `YOUR_REPOSITORY`.
-- Включи GitHub Pages из ветки `main`, папка `/docs`.
-- Покажи преподавателю PostgreSQL-таблицы, `alembic current`, Swagger и успешный `pytest -q`.
 
