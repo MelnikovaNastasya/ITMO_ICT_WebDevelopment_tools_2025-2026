@@ -52,9 +52,7 @@ docker compose up --build
 - `http://localhost:8000/docs` — основное приложение;
 - `http://localhost:8001/docs` — сервис парсера.
 
-### Скриншот запуска контейнеров
 
-![Запущенные контейнеры](images/docker-compose.png)
 
 ## Подзадание 2. Синхронный вызов парсера
 
@@ -87,9 +85,6 @@ POST /parser/sync
 
 Для URL выполняется проверка схемы и адреса. Доступ к локальным и служебным IP-адресам запрещён.
 
-### Скриншот синхронного запроса
-
-![Синхронный парсинг](images/sync-parser.png)
 
 ## Подзадание 3. Celery и Redis
 
@@ -116,13 +111,6 @@ GET /parser/tasks/{task_id}
 
 Возможные состояния: `PENDING`, `STARTED`, `SUCCESS`, `FAILURE`.
 
-### Скриншот фонового запроса
-
-![Фоновый парсинг](images/async-parser.png)
-
-### Скриншот результата Celery
-
-![Результат Celery](images/celery-result.png)
 
 ## Тестирование
 
@@ -140,10 +128,6 @@ GET /parser/tasks/{task_id}
 ```bash
 pytest -q
 ```
-
-### Скриншот тестов
-
-![Результаты pytest](images/tests.png)
 
 ## Вывод
 

@@ -1,9 +1,8 @@
-site_name: TimeFlow — лабораторная работа №1
-site_description: Отчёт Мельниковой Настасьи, группа К3341
+site_name: Лабораторные работы Мельниковой Настасьи
+site_description: Отчёты Мельниковой Настасьи, группа К3341
 site_url: https://melnikovanastasya.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/
 
 docs_dir: students/k3341/Melnikova_Nastasya
-
 
 theme:
   name: material
@@ -13,10 +12,10 @@ theme:
     accent: blue
 
 nav:
-  - Главная: students/k3341/Melnikova_Nastasya/Lr1/docs/index.md
-  - Лабораторная работа №1: students/k3341/Melnikova_Nastasya/Lr1/docs/index.md
-  - Лабораторная работа №2: students/k3341/Melnikova_Nastasya/Lr2/docs/index.md
-  - Лабораторная работа №3: students/k3341/Melnikova_Nastasya/Lr3/docs/index.md
+  - Главная: Lr1/docs/index.md
+  - Лабораторная работа №1: Lr1/docs/index.md
+  - Лабораторная работа №2: Lr2/docs/index.md
+  - Лабораторная работа №3: Lr3/docs/index.md
 
 markdown_extensions:
   - tables
